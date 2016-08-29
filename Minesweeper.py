@@ -124,8 +124,6 @@ def expose(exposed_col, exposed_row):
         exposed_cell.is_exposed = True
         exposed_cell.gen_sprite()
         if exposed_cell.num_surrounding_mines == 0 and exposed_cell.has_mine == False:
-            exposed_cell.is_exposed = True
-            exposed_cell.gen_sprite()
             for col_offset, row_offset in neighbour_offsets:
                 neighbour_col = exposed_col + col_offset
                 neighbour_row = exposed_row + row_offset
